@@ -1,0 +1,14 @@
+.hero {
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    position: relative;  
+    display: flex;
+    justify-content: center;
+    padding: 2% 2%;
+}
+
+.hero h1 {
+    color: white;
+    font-size: 70px;
+}
