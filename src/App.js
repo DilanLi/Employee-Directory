@@ -8,33 +8,40 @@ class App extends Component {
     state = {
         result: {},
         search: ""
-      };
+    };
 
     componentDidMount() {
         this.searchResident();
     }
 
-    searchResident = () => {
-    API.search()
-    .then(res => {
-        this.setState({ result: res.data })
-        console.log(res)
-    }
-    )
-    .catch(err => console.log(err));
+
+    searchResident = (id) => {
+        let residents = []
+        for (id = 10; id < 140; id += 10) {
+            API.search(id)
+            .then(res => {
+            residents.push(res.data)
+            },
+            this.setState({ result: residents })
+            )
+            .catch(err => console.log(err));
+        }
     }
 
     render() {
-    if (this.state.result === {}){
-        return
-    }
-    // console.log(this.state.result.name['name-USen'])
-    return (
-    <div>
-    <Hero backgroundImage={heroImage}/>
-    <Card name={this.state.result.fitness} />
-    </div>
-    )
+        if (this.state.result === {}) {
+            return
+        }
+
+        let response = this.state.result;
+        console.log(response)
+
+        return (
+            <div>
+                <Hero backgroundImage={heroImage} />
+                <Card residents={response}/>
+            </div>
+        )
     }
 }
 

@@ -1,18 +1,19 @@
-// import React, { Component } from "react";
 import React from "react";
 import "./style.css";
-// import API from "../utils/API"
 
 function Card(props) {
-
     return (
-        <div className="card">
-            <img alt={`animal crossing character${props.name}`} src={props.url} />
-            <h3>{props.name}</h3>
-            <p>Gender: {props.gender}</p>
-            <p>Personality: {props.personality}</p>
-            <p>Hobby: {props.hobby}</p>
-            <p>Saying: {props.saying}</p>
+        <div>
+        {props.residents.map( resident => (
+            <div className="card" key={resident.id}>
+            <img alt={`animal crossing character${resident.name}`} src={resident.url} />
+            <h3>{resident.name}</h3>
+            <p>Gender: {resident.gender}</p>
+            <p>Personality: {resident.personality}</p>
+            <p>Hobby: {resident.hobby}</p>
+            <p>Saying: {resident.saying}</p>
+        </div>
+        ))}
         </div>
     )
 }
