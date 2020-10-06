@@ -21,8 +21,8 @@ class App extends Component {
             API.search(id)
             .then(res => {
             residents.push(res.data)
-            },
             this.setState({ result: residents })
+            }
             )
             .catch(err => console.log(err));
         }
