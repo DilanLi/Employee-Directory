@@ -17,29 +17,30 @@ class App extends Component {
 
     searchResident = (id) => {
         let residents = []
-        for (id = 10; id < 140; id += 10) {
+        for (id = 10; id < 160; id += 10) {
             API.search(id)
-            .then(res => {
-            residents.push(res.data)
-            this.setState({ result: residents })
-            }
-            )
-            .catch(err => console.log(err));
+                .then(res => {
+                    residents.push(res.data)
+                    this.setState({ result: residents })
+                }
+                )
+                .catch(err => console.log(err));
         }
     }
 
     render() {
-        if (this.state.result === {}) {
-            return
-        }
 
         let response = this.state.result;
         console.log(response)
 
+        if (!response) {
+            return
+        }
+
         return (
             <div>
                 <Hero backgroundImage={heroImage} />
-                <Card residents={response}/>
+                <Card residents={this.state.result} />
             </div>
         )
     }

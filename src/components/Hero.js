@@ -4,7 +4,8 @@ import "./style.css";
 function Hero(props){
     return (
     <div className="hero" style={{ backgroundImage: `url(${props.backgroundImage})`}}>
-        <h1>Llamacorn Island Residents Directory</h1>
+        <h1>LLAMACORN ISLAND <br></br>
+        RESIDENTS DIRECTORY</h1>
         </div>
         )
 }
