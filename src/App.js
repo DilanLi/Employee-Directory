@@ -36,7 +36,22 @@ class App extends Component {
         for (id = 10; id < 170; id += 10) {
             API.search(id)
                 .then(res => {
-                    names.push(res.data.name['name-USen'].sort());
+                    function compare(a, b) {
+                        // Use toUpperCase() to ignore character casing
+                        const nameA = a.band.toUpperCase();
+                        const nameB = b.band.toUpperCase();
+                      
+                        let comparison = 0;
+                        if (nameA > nameB) {
+                          comparison = 1;
+                        } else if (nameA < nameB) {
+                          comparison = -1;
+                        }
+                        return comparison;
+                      }
+
+                    names.push(res.data.sort(compare));
+                    console.log(names)
                     this.setState({ result: names })
                 }
                 )
