@@ -3,7 +3,7 @@ body {
 }
 
 .hero {
-    height: 375px;
+    height: 350px;
     background-size: cover;
     background-position: center;
     text-align: center;
@@ -12,11 +12,24 @@ body {
 .hero h1 {
     color: white;
     font-size: 60px;
+    font-weight: 900;
     padding-top: 10%;
 }
 
-.cards-container {
+.all-container {
     align-items: center;
+}
+
+.nav {
+    background-color: tomato;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.dropdown {
+    padding: 0 25px;
 }
 
 img {
@@ -27,7 +40,7 @@ max-height:100%;
 
 .card {
     float: left;
-    height: 500px;
+    height: 550px;
     margin: 10px;
     padding-top: 15px;
     border-radius: 25px;
