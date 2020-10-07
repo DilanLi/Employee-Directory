@@ -8,7 +8,9 @@ function Sort(props){
           Sort By
         </button>
         <div className="dropdown-menu" aria-labelledby="dropdownMenu2">
-          <button onClick={props.sortByName} className="dropdown-item" type="button">Name</button>
+          <button onClick={props.sortByHobby} className="dropdown-item" type="button">Hobby</button>
+          <button onClick={props.sortByPersonality} className="dropdown-item" type="button">Personality</button>
+          <button onClick={props.sortByGender} className="dropdown-item" type="button">Gender</button>
         </div>
       </div>
         )
