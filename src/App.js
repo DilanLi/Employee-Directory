@@ -5,7 +5,7 @@ import Card from "./components/Card";
 import API from "./utils/API";
 import Filter from "./components/Filter";
 import Sort from "./components/Sort";
-import "./components/style.css"
+// import "./components/style.css"
 
 class App extends Component {
     state = {
