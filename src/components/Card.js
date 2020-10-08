@@ -11,7 +11,7 @@ function Card(props) {
     }
     
     return (
-        <div className="cards-container d-flex justify-content-center">
+        <div className="cards-container">
             {props.residents.map(resident => (
                 <div className="card col-md-3 col-lg-2 col-sm-5" key={resident.id}>
                     <img alt={`animal crossing character${resident.name['name-USen']}`} src={resident.image_uri} />

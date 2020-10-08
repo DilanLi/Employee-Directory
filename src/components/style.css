@@ -16,8 +16,10 @@ body {
     padding-top: 10%;
 }
 
-.all-container {
-    align-items: center;
+.cards-container {
+    display: flex;
+justify-content: center;
+align-items:center;
 }
 
 .nav {
