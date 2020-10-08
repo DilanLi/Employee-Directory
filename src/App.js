@@ -40,15 +40,15 @@ class App extends Component {
                         // Use toUpperCase() to ignore character casing
                         const hobbyA = a.hobby.toUpperCase();
                         const hobbyB = b.hobby.toUpperCase();
-                      
+
                         let comparison = 0;
                         if (hobbyA > hobbyB) {
-                          comparison = 1;
+                            comparison = 1;
                         } else if (hobbyA < hobbyB) {
-                          comparison = -1;
+                            comparison = -1;
                         }
                         return comparison;
-                      }
+                    }
 
                     names.push(res.data);
                     names.sort(compare);
@@ -69,15 +69,15 @@ class App extends Component {
                         // Use toUpperCase() to ignore character casing
                         const personalityA = a.personality.toUpperCase();
                         const personalityB = b.personality.toUpperCase();
-                      
+
                         let comparison = 0;
                         if (personalityA > personalityB) {
-                          comparison = 1;
+                            comparison = 1;
                         } else if (personalityA < personalityB) {
-                          comparison = -1;
+                            comparison = -1;
                         }
                         return comparison;
-                      }
+                    }
 
                     personalities.push(res.data);
                     personalities.sort(compare);
@@ -98,15 +98,15 @@ class App extends Component {
                         // Use toUpperCase() to ignore character casing
                         const genderA = a.gender.toUpperCase();
                         const genderB = b.gender.toUpperCase();
-                      
+
                         let comparison = 0;
                         if (genderA > genderB) {
-                          comparison = 1;
+                            comparison = 1;
                         } else if (genderA < genderB) {
-                          comparison = -1;
+                            comparison = -1;
                         }
                         return comparison;
-                      }
+                    }
 
                     genders.push(res.data);
                     genders.sort(compare);
@@ -178,16 +178,16 @@ class App extends Component {
             <div className="all-container">
                 <Hero backgroundImage={heroImage} />
                 <div className="nav ">
-                    <Filter 
-                    filterByMale={this.filterByMale}
-                    filterByFemale={this.filterByFemale}
-                    filterByNormal={this.filterByNormal}
-                    searchResident={this.searchResident}
+                    <Filter
+                        filterByMale={this.filterByMale}
+                        filterByFemale={this.filterByFemale}
+                        filterByNormal={this.filterByNormal}
+                        searchResident={this.searchResident}
                     />
-                    <Sort 
-                    sortByHobby={this.sortByHobby}
-                    sortByPersonality={this.sortByPersonality}
-                    sortByGender={this.sortByGender}
+                    <Sort
+                        sortByHobby={this.sortByHobby}
+                        sortByPersonality={this.sortByPersonality}
+                        sortByGender={this.sortByGender}
                     />
                 </div>
                 <Card residents={this.state.result} />
