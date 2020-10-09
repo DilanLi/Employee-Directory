@@ -13,6 +13,7 @@ The purpose of this project is to practice my newly learned knowledge in React, 
 <img src="src/assets/screenshot.png" width="750">
 
 ## Link to Deployed Website
+https://dilanli.github.io/Employee-Directory/
 
 ## Credit
 API: ACNH API
