@@ -11,7 +11,7 @@ function Filter(props){
           <button onClick={props.searchResident} className="dropdown-item" type="button">All</button>
           <button onClick={props.filterByMale} className="dropdown-item" type="button">Male</button>
           <button onClick={props.filterByFemale} className="dropdown-item" type="button">Female</button>
-          <button onClick={props.filterByNormal} className="dropdown-item" type="button">What on earch is a normal personality?</button>
+          <button onClick={props.filterByNormal} className="dropdown-item" type="button">What on earth is a normal personality?</button>
         </div>
       </div>
         )
