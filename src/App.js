@@ -52,7 +52,6 @@ class App extends Component {
 
                     names.push(res.data);
                     names.sort(compare);
-                    console.log(names);
                     this.setState({ result: names })
                 }
                 )
@@ -81,7 +80,6 @@ class App extends Component {
 
                     personalities.push(res.data);
                     personalities.sort(compare);
-                    console.log(personalities);
                     this.setState({ result: personalities })
                 }
                 )
@@ -110,7 +108,6 @@ class App extends Component {
 
                     genders.push(res.data);
                     genders.sort(compare);
-                    console.log(genders);
                     this.setState({ result: genders })
                 }
                 )
@@ -126,7 +123,6 @@ class App extends Component {
                     if (res.data.gender === "Male") {
                         males.push(res.data);
                     }
-                    console.log(males);
                     this.setState({ result: males })
                 }
                 )
@@ -142,7 +138,6 @@ class App extends Component {
                     if (res.data.gender === "Female") {
                         females.push(res.data);
                     }
-                    console.log(females);
                     this.setState({ result: females })
                 }
                 )
@@ -158,7 +153,6 @@ class App extends Component {
                     if (res.data.personality === "Normal") {
                         normals.push(res.data);
                     }
-                    console.log(normals);
                     this.setState({ result: normals })
                 }
                 )
