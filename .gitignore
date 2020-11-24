@@ -1,3 +1,2 @@
-react guide.md
-homework_guidelines.md
-node_modules/
+./node_modules/
+./build/
